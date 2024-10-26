@@ -53,6 +53,7 @@ button {
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 16px; /* Font size for the button */
     transition: background-color 0.3s; /* Smooth transition for background color */
+    margin-bottom: 10px; /* Space below each button */
 }
 
 button:hover {
