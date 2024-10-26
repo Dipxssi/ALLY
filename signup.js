@@ -8,13 +8,16 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const location = document.getElementById('location').value;
     const email = document.getElementById('email').value;
 
-    // Log the data to the console (you can replace this with actual submission logic)
-    console.log('Username:', username);
-    console.log('Gender:', gender);
-    console.log('Birthday:', birthday);
-    console.log('Location:', location);
-    console.log('Email:', email);
+    // Store the username in local storage (you can use session storage or other methods)
+    localStorage.setItem('username', username);
 
-    // You can also add code to send this data to a server here
+    // Redirect to the main page
+    window.location.href = 'main page.html';
 });
+// Get the username from local storage and display it
+document.addEventListener('DOMContentLoaded', function() {
+    const username = localStorage.getItem('username');
+    document.getElementById('usernameDisplay').textContent = username || 'User';
+});
+
 

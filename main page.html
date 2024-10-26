@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page - Ally</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-page">
+        <h1 id="welcomeMessage">Welcome, <span id="usernameDisplay"></span>!</h1>
+        <div class="options">
+            <button id="askButton">ASK</button>
+            <button id="thoughtsButton">THOUGHTS</button>
+            <button id="knowMoreButton">KNOW MORE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Get the username from local storage and display it
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            document.getElementById('usernameDisplay').textContent = username || 'User';
+        });
+    </script>
+</body>
+</html>
+
