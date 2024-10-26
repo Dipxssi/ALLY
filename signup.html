@@ -35,5 +35,27 @@
     </div>
 
     <script src="signup.js"></script>
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const username = document.getElementById('username').value;
+            const gender = document.getElementById('gender').value;
+            const birthday = document.getElementById('birthday').value;
+            const location = document.getElementById('location').value;
+            const email = document.getElementById('email').value;
+
+            // Store values in localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('gender', gender);
+            localStorage.setItem('birthday', birthday);
+            localStorage.setItem('location', location);
+            localStorage.setItem('email', email);
+
+            // Redirect to main page
+            window.location.href = 'main page.html';
+        });
+    </script>
 </body>
 </html>

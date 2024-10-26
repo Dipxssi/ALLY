@@ -21,10 +21,17 @@
         // Get the username from local storage and display it
         document.addEventListener('DOMContentLoaded', function() {
             const username = localStorage.getItem('username');
-            document.getElementById('usernameDisplay').textContent = username || 'User';
+            // If no username is found, redirect to the landing page
+            if (!username) {
+                alert('You need to sign in first.');
+                window.location.href = 'landing.html'; // Redirect to landing page
+            } else {
+                document.getElementById('usernameDisplay').textContent = username; // Display username
+            }
         });
     </script>
 </body>
 </html>
+
 
 
